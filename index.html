@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Antonio D'Amico's Final Project</title>
+    </head>
+    <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Final Project Antonio D'Amico</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="theory.html">I Promessi Sposi</a></li>
+            <li><a class="dropdown-item" href="visualizations.html">I Malavoglia</a></li>
+            <li>
+            <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="cinema.html">Cinema</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+        <img src="Jerome 2.png" width= 120% height= 80% class="left" opacity=0.3>
+        <h1> Place and Exile in Italian Literature and Film </h1>
+        <h2>National Canons, Transnational Turns, and the Place of Translation</h2>
+        <hr class="my-3">
+        <div class="section">
+
+<pre>
+        “A real translation is transparent;
+        it does not cover the original,
+        does not block its light,
+        but allows the pure language,
+        as though reinforced by its own medium,
+        to shine upon the original all the more fully”</pre>
+
+            <p><em>Walter Benjamin, The Task of the Translator, 260</em></p>
+            <p> "What I tell you in <em>darkness</em>, that speak ye in Light."
+            <p><em>Matthew 10:27</em></p>
+            <p class="prose">What belongs to the canon of Italian literature and cinema? My project aims to approach these questions by examining the 2020  <a href="https://italian.yale.edu/sites/default/files/files/GraduateReadingList2020.pdf">Graduate Reading List</a> of Italian Studies at Yale University and offer a quantitative analysis of some of the shared recurring features of the roughly 100 texts that have been selected in this list. To this end, my goal is to build a model that classifies whether a text is or is not likely to enter the canon according to a set of specific parameters. These include the gender of the author, their geographic (regional) provenance (using GeoPandas, if time permits), their age (how old was the author when their canonical text was released to the public), and the critical engagement with the text over the past century. Which generation of authors is more present than others? Which region is neglected? Overall, the project will reach a working positive (descriptive) definition of what is Italian culture as it is currently understood in 2022 at .
+            </p>
+            <a class="btn btn-warning btn-lg" href="visualizations.html" role="button">Visualize the Italian Canon</a>
+          </div>
+        <hr class="my-3">
+        <h2>Poems</h2>
+        The list lists the primary texts that the Italian Studies department at Yale has included in the graduate reading list. The list includes a total of 173 items and comprises:
+
+        <ul>
+          <li>17 Latin and Biblical texts</li>
+          <li>50 stand-alone poems</li>
+          <li>69 primary texts (including collections of poems and letters)</li>
+          <li>27 texts on literary theory and history</li>
+          <li>7 films</li>
+        </ul>
+
+        <p>
+
+          <p class="prose">These texts have been transcribed into a csv file according to 8 parameters: name, title, year,
+          age, birth, place, gender, genre. These will be used to answer the following question: what
+          belongs to the canon of Italian literature and cinema? Let’s start by looking at an example:
+          Alessandro Manzoni’s historical novel I Promessi Sposi (1840-2).</p>
+
+          <img src="word frequency malavoglia.png" width= 100% height= 100% class="left">
+
+          <pre>
+
+            CODE I USED ON JUPYTER NOTEBOOK
+
+            import matplotlib.pylab as plt
+            import numpy as np
+
+            plt.style.use('dark_background')
+            fig, ax = plt.subplots(figsize=(30,13))
+
+            top100= list(sorted_frequency.values())[:100]
+            top100w = list(sorted_frequency.keys())[:100]
+            y_pos = np.arange(len(top100w))
+            ax.barh(y_pos, top100)
+            ax.set_yticklabels(top100w)
+            ax.invert_yaxis()
+
+            ax.set_title('Frequency of long words in I Malavoglia')
+          </pre>
+    </body>
+
+<pre>
+    with open ('I_Malavoglia.txt', 'r') as f:
+    text =f.read()
+  # count words, sentences, and letters
+  words = 1
+  sentences = 0
+  letters = 0
+
+  # count the number of times blank spaces appear +1 using a for loop iterating ovr every element in the text
+  for char in text:
+      if char == ' ':
+          words += 1
+  # count the number of times punctuation marks appear. I am not sure why putting ASCII numbers (33, 46, 63) seems to not work anymore
+      elif char == '.' or char == '!' or char == '?':
+          sentences += 1
+      elif char.isalpha():
+          letters += 1
+
+  # calculate variables of Coleman Liau's index
+  L = (letters / words)
+  S = (sentences / words)
+  print(f'words {words}')
+  print(f'letters {letters}')
+  print(f'sentences {sentences}')
+  # Coleman Liau's index
+  index = (5.88 * L - 29.6 * S) - 15.8
+
+  # print results
+  print(f'index {index}')
+
+  words 87424
+  letters 395131
+  sentences 4522
+  index 9.24482842240117
+
+  </pre>
+
+    <body>
+
+      <h2>Number of words in the canon</h1>
+
+      <div>
+          <canvas id="myChart"></canvas>
+        </div>
+        <img src="timeline.png" opacity="0.6" width= 100% height= 80% class="left">
+<pre>
+    df
+    plt.figure(figsize=(50, 25))
+
+    plt.style.use('dark_background')
+    sns.scatterplot(x = 'year', y= "age", hue= "gender", s=1000, palette=['blue','red'], data = df)
+    #plt.show()
+    plt.xlim([-1500, 2100])
+    plt.ylim([0,155])
+    plt.xlabel("year of publishing", size=50)
+    plt.ylabel("age of the author", size=50)
+    plt.grid(linestyle = '--',)
+    plt.xticks(fontsize=25)
+    plt.yticks(fontsize=25)
+
+    plt.legend(['texts authored by men', 'texts auhtored by women'], loc=1, prop={'size': 30})
+
+    a = df['gender'].value_counts()
+    b = df['gender'].value_counts()
+
+</pre>
+
+  <img src="pie1.png" width= 30% height= 30% class="left">
+  <p></p>
+  <img src="pie2.png" width= 30% height= 30% class="left">
+
+  <pre>
+
+
+  </pre>
+
+  <p></p>
+  <img src="bar.png" width= 30% height= 30% class="left">
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+          const ctx = document.getElementById('myChart');
+
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Manzoni', 'Verga', '3', '4', '5', '6'],
+              datasets: [{
+                label: 'Words in the Italian Canon according to Author',
+                data: [217399, 87424, 50000, 50000, 50000],
+
+                borderWidth: 1
+              }]
+            },
+            options: {
+              indexAxis: 'y',
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+
+<img src="italia.png" width= 100% height= 30% class="center">
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+<footer>
+      by <a href="https://italian.yale.edu/people/antonio-damico">Antonio P. D'Amico</a>
+</footer>
+</html>

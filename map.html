@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=2" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Antonio D'Amico's Final Project</title>
+
+        <script>
+          function displayt() {
+          text.style.display = "inline";
+          document.getElementById("display").style.visibility = "visible";
+          }
+
+          function displaydante() {
+            document.getElementById("displaydante").value = "Dante Alighieri, click to learn more";
+          }
+
+  </script>
+
+
+    </head>
+    <body>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container 1">
+              <a class="navbar-brand" href="#">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Final Project Antonio D'Amico</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="theory.html">I Promessi Sposi</a></li>
+                      <li><a class="dropdown-item" href="visualizations.html">I Malavoglia</a></li>
+                      <li>
+                      <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="cinema.html">Cinema</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <h1> Mapping Italian Literature and Film</h1>
+          <h2> Where do we locate the authors in the list? </h2>
+
+  <div class="imagecontainer">
+    <img src="mappa Italia.png" width=100%>
+    <div class="tuscany"><button class="btn" onClick="document.getElementById('dante').scrollIntoView()";><img src="/icons/dante.png" id="displaydante" onMouseover="displaydante();"></div>
+    <div class="tuscany2"><button class="btn" onclick="display()"><img src="/icons/petrarca.png"></div>
+    <div class="sicily"><button class="btn" onClick="document.getElementById('verga').scrollIntoView();"><img src="/icons/verga.png"></div>
+    <div class="rome1"><button class="btn" onClick="document.getElementById('igiaba').scrollIntoView();"><img src="/icons/igiaba.png"></div>
+    <div class="palermo"><button class="btn" onClick="document.getElementById('lampedusa').scrollIntoView();"><img src="/icons/lampedusa.png"></div>
+    <div class="torino"><button class="btn" onClick="document.getElementById('primo').scrollIntoView();"><img src="/icons/primo.png"></div>
+    <div class="liguria"><button class="btn" onClick="document.getElementById('calvino').scrollIntoView();"><img src="/icons/italo calvino.png"></div>
+    <div class="trieste"><button class="btn" onClick="document.getElementById('svevo').scrollIntoView();"><img src="/icons/svevo.png"></div>
+    <div class="abruzzo"><button class="btn" onClick="document.getElementById('dannunzio').scrollIntoView();"><img src="/icons/dannunzio1.png"></div>
+    <div class="milano"><button class="btn" onClick="document.getElementById('manzoni').scrollIntoView();"><img src="/icons/manzoni.png"></div>
+    <div class="sardegna"><button class="btn" onClick="document.getElementById('gramsci').scrollIntoView();"><img src="/icons/gramsci.png"></div>
+    <div class="tuscany3"><button class="btn" onClick="document.getElementById('boccaccio').scrollIntoView();"><img src="/icons/boccaccio.png"></div>
+    <div class="tuscany4"><button class="btn" onClick="document.getElementById('caterina').scrollIntoView();"><img src="/icons/caterina.png"></div>
+    <div class="timeline1"><button class="btn" onClick="document.getElementById('timeline1').scrollIntoView();"><p class="t">Complete Timeline</p></div>
+    <div class="timeline2"><button class="btn" onClick="document.getElementById('timeline2').scrollIntoView();"><p class="t">Abridged Timeline</p></div>
+    <div class="gender"><button class="btn" onClick="document.getElementById('gender').scrollIntoView();"><p class="t">Gender Breakdown</p></div>
+  </div>
+
+    <p id="text" class="info" position="relative" top="200%" style="display:none">Dante's (1265-1321) Comedy is 83134 words, 404488 letters, and 3785 sentences long.
+      Its CL index is 11.461450670002641.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <canvas id="wordsinthecanon"></canvas>
+
+    <script>
+      const ctx = document.getElementById('wordsinthecanon');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Dante', 'Manzoni', 'Verga', ''],
+          datasets: [{
+            label: 'How long are these texts?',
+            data: [83134, 217399, 87424],
+            borderWidth: 4
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+    </script>
+    <hr class="my-3">
+    <div id='timeline1'><h3>Complete timeline</h3><img src="timeline1.png" opacity="0.6">
+    <div><button class="btn" onClick="document.getElementById('code1').scrollIntoView();"><p class="t">See code</p></div>
+    <form>
+      <a class= "fixedbtn" href>
+        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+      </a>
+    </form>
+    <hr class="my-3">
+
+    <div id='timeline2'><h3>1200-2022 timeline</h3><img src="timeline2.png" opacity="0.6">
+    <div><button class="btn" onClick="document.getElementById('code2').scrollIntoView();"><p class="t">See code</p></div>
+    <form>
+      <a class= "fixedbtn" href>
+        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+      </a>
+    </form>
+    <hr class="my-3">
+
+    <div id='gender'><h3>Gender imbalance</h3>
+    <p>154 texts are authored by men, 18 by women.</p>
+    <img id="small" src="gender.png" width="10%">
+    <div><button class="btn" onClick="document.getElementById('code3').scrollIntoView();"><p class="t">Source Code</p></div>
+    <form>
+      <a class= "fixedbtn" href>
+        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+      </a>
+    </form>
+
+    <hr class="my-3">
+
+    <div id='dante'class="square"><h1>Dante Alighieri</h1>
+      <h2>The Divine Comedy</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <img class="img1" width="10%" src="/icons/dante.png"></div>
+        <p></p>
+        <h3>1320</h3>
+        <p>Dante's Comedy offers a highly allegorical vision of the afterlife. The text interweaves Christian theology and classical literature to probe man's journey through life and beyond through trashumanation in only 83134 words, 404488 letters, and 3785 sentences.
+        The comedy's CL index is 11.461450670002641.</p>
+        <form>
+          <a class= "fixedbtn" href>
+          <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+          </a>
+        </form>
+        <hr class="my-3">
+    <div id='petrarca'class="square"><h1>Francesco Petrarca</h1>
+      <h2>Il Canzoniere</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <img class="img1" src="/icons/petrarca.png"></div>
+        <p></p>
+        <h3>1372</h3>
+        <p>Following a failed Epic poem, Petrarch collects the fragments of his life in a collection of poems that is a life long endeavor: the Rerum Vulgari Fragmenta.
+        Its CL index is 11.461450670002641.</p>
+
+        <form>
+          <a class= "fixedbtn" href>
+          <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+          </a>
+        </form>
+
+    <hr class="my-3">
+
+    <div id='boccaccio'class="square"><h1>Giovanni Boccaccio</h1>
+      <h2>The Decameron</h2>
+      <p></p>
+      <p></p>
+      <p></p>
+        <img class="img1" src="/icons/boccaccio.png"></div>
+        <p></p>
+        <h3>1353</h3>
+      <p>Written between 1348 and 1353, Bocaccio's Decameron comprises one hundred short stories. The last story appears to be the most significant.</p>
+      <p>Gualtieri and the peasant woman Griselda</p>
+        <form>
+          <a class= "fixedbtn" href>
+          <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+          </a>
+        </form>
+    <hr class="my-3">
+    <div id='caterina' class="square"><h1>Santa Caterina da Siena</h1>
+      <h2>Caterina's collection of letters</h2>
+      <img class="img1" src="/icons/caterina.png"></div>
+      <p></p>
+      <h3>1380</h3>
+      <p>A collection of letters written in the name of Gesù Cristo crocifisso e di Maria dolce by a self-proclaimed serva e schiava dei servi di Gesù Cristo writing nel prezioso sangue suo. Gesù dolce, Gesù amore.</p>
+      <form>
+      <a class= "fixedbtn" href>
+        <button class="btni" id="fixedbutton" ondbclick = "return();">Return to map</button>
+        </a>
+      </form>
+
+      <p></p>
+      <p></p>
+    <hr class="my-3">
+
+    <div id='manzoni'class="square"><h3>Alessandro Manzoni</h3>
+      <h2>I Promessi Sposi</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <img class="img1" src="/icons/manzoni.png" width=100%></div>
+        <p></p>
+        <h3>1842</h3>
+        <p>A historical novel about 17th century peasants who survive the tide of history by developing buon senso and trusting in divine providence.</p>
+
+    <form>
+      <a class= "fixedbtn" href>
+      <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+      </a>
+    </form>
+    <hr class="my-3">
+    <div id='verga'class="square"><h3>Giovanni Verga</h3>
+      <h2>I Malavoglia</h2>
+
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <img class="img1" src="/icons/verga.png" width=100%></div>
+        <p></p>
+        <h3>1881</h3>
+        <p>Verga writes about writing I Malavoglia in a 1875 letter. The novel is published in 1881.</p>
+        <p></p>
+        <form>
+          <a class= "fixedbtn" href>
+          <button class="btni" id="fixedbutton" ondbclick = "return();">Return to map</button>
+          </a>
+        </form>
+        <hr class="my-3">
+        <div id='dannunzio'class="square"><h3>Gabriele Dannunzio</h3>
+          <h2>Il piacere</h2>
+            <img class="img1" src="/icons/dannunzio1.png" width=100%></div>
+            <p></p>
+            <h3>1889</h3>
+            <p>A Decadent aristocratic love affair in a decadent Rome interweaving lyricism and references to English Romanticism.</p>
+
+            <form>
+              <a class= "fixedbtn" href>
+              <button class="btni" id="fixedbutton" ondbclick = "return();">Return to map</button>
+              </a>
+            </form>
+      <hr class="my-3">
+      <div id='svevo'class="square"><h1>Italo Svevo</h1>
+      <h2>La Coscienza di Zeno</h2>
+      <img class="img1" src="/icons/svevo.png"></div>
+      <p></p>
+      <h3>1923</h3>
+      <p>Zeno Cosini fails to quite smoking, accidentally murders his father, and marries a woman he finds unattractive.</p>
+
+      <form>
+        <a class= "fixedbtn" href>
+        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+        </a>
+      </form>
+
+      <hr class="my-3">
+
+        <div id='gramsci'class="square"><h1>Antonio Gramsci</h1>
+          <h2>La questione meridionale</h2>
+          <img class="img1" src="/icons/gramsci.png"></div>
+          <p></p>
+          <h3>1926</h3>
+          <p>Gramsci argues for an alliance between Italy's Northern factory workers and Southern peasants in the wake of the 1918 rivolta contro il capitale.</p>
+
+          <form>
+            <a class= "fixedbtn" href>
+            <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+            </a>
+          </form>
+
+          <hr class="my-3">
+
+          <div id='primo'class="square"><h1>Primo Levi</h1>
+            <h2>Se questo è un uomo</h2>
+            <img class="img1" src="/icons/primo.png"></div>
+            <p></p>
+            <h3>1947</h3>
+            <p>A biographical account of the Holocaust by a chemist drawing on humanist culture to filter his experience.</p>
+
+            <form>
+              <a class= "fixedbtn" href>
+              <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+              </a>
+            </form>
+
+            <hr class="my-3">
+
+      <div id='calvino'class="square"><h1>Italo Calvino</h1>
+        <h2>Il barone rampante</h2>
+        <img class="img1" src="/icons/italo calvino.png"></div>
+        <p></p>
+        <h3>1957</h3>
+        <p>The Enlightenment through the story of an aristocrat who spends his life on trees without ever touching ground above the ficitonal Ligurian town of Ombrosa.</p>
+
+  <form>
+    <a class= "fixedbtn" href>
+    <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+    </a>
+  </form>
+
+  <hr class="my-3">
+
+          <div id='lampedusa'class="square"><h1>Giuseppe Tomasi di Lampedusa</h1>
+            <h2>Il Gattopardo</h2>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <img class="img1" src="/icons/lampedusa.png"></div>
+            <p></p>
+            <h3>1958</h3>
+            <p>The twiglight of Sicily's aristocracy from the solipsistic perspective of the last lepard.</p>
+
+      <form>
+        <a class= "fixedbtn" href>
+        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+        </a>
+      </form>
+
+      <hr class="my-3">
+
+    <div id='igiaba'class="square"><h1>Igiaba Scego</h1>
+      <h2>Adua</h2>
+      <img class="img1" src="/icons/igiaba.png"></div>
+      <p></p>
+      <h3>2017</h3>
+      <p>Two interweaving stories of a father and a daughter victimized by Italian colonialism in Somalia.</p>
+
+      <form>
+        <a class= "fixedbtn" href>
+        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+        </a>
+      </form>
+
+      <hr class="my-3">
+
+<footer>
+      by <a href="https://italian.yale.edu/people/antonio-damico">Antonio P. D'Amico</a>
+      <div id='code1'><h1>Code Timeline</h1><pre>
+
+
+        import pandas as pd
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        import csv
+        from google.colab import files
+
+        df = pd.read_csv('testcsv.csv', encoding = "latin-1", delimiter=";", on_bad_lines='skip')
+        plt.figure(figsize=(80, 40))
+
+        plt.style.use('dark_background')
+        sns.scatterplot(x = 'year', y= "age", hue= "gender", s=800, palette=['blue','red'], data = df)
+        plt.xlim([-1500, 2100])
+        plt.ylim([0,155])
+        plt.xlabel("year of publishing", size=50)
+        plt.ylabel("age of the author", size=50)
+        plt.grid(linestyle = '--',)
+        plt.xticks(fontsize=25)
+        plt.yticks(fontsize=25)
+
+        plt.legend(['texts authored by men', 'texts auhtored by women'], loc=1, prop={'size': 30})
+
+        a = df['gender'].value_counts()
+        b = df['gender'].value_counts()
+
+        plt.savefig('my_plot.png', transparent=True)
+        files.download('my_plot.png')</pre></div>
+
+    <div id='code2'><h1>Code Shorter Timeline</h1><pre>
+
+        plt.style.use('dark_background')
+        plt.figure(figsize=(50, 25))
+        sns.scatterplot(x = 'year', y= "age", hue= "gender", s=250, palette=['blue','red'], data = df)
+        plt.xlim([1200, 2022])
+        plt.ylim([0,85])
+
+        plt.xlabel("year of publishing", size=50)
+        plt.ylabel("age of the author", size=50)
+        plt.grid(linestyle = '--',)
+        plt.xticks(fontsize=25)
+        plt.yticks(fontsize=25)
+
+        a = df['gender'].value_counts()
+        b = df['gender'].value_counts()
+
+        plt.savefig('my_plot.png', transparent=True)
+        files.download('my_plot.png')
+
+    </pre>
+    <div id='code3'><h1>Code barplot and pie</h1><pre>
+
+      plt.figure(figsize=(17,17))
+      #print(df['sesso'].value_counts(normalize=True))
+      x = df['gender'].value_counts().uomo
+      y = df['gender'].value_counts().donna
+      print(x)
+      print(y)
+      labels = 'texts authored by men', 'texts authored by women',
+      sizes = [x, y]
+
+      plt.pie(sizes, labels=labels, wedgeprops = { 'linewidth' : 3, 'edgecolor' : 'white' }, colors=['grey','white'])
+
+      # Pieplot + circle on it
+      p=plt.gcf()
+      plt.legend(prop={'size': 20})
+      plt.savefig('my_plot.png', transparent=True)
+      files.download('my_plot.png')
+
+      plt.style.use('dark_background')
+      women = df['gender'].value_counts().donna
+      men = df['gender'].value_counts().uomo
+
+      fig = plt.figure(figsize = (15, 30))
+      X_axis = ['texts by men', 'texts by women']
+      y_axis = [men, women]
+      #np.arange(len(X))
+      plt.xticks(fontsize=25)
+      plt.yticks(fontsize=25)
+      plt.bar(X_axis, y_axis, 0.5, color = 'white', alpha = 1)
+      #plt.bar(X_axis, Ygirls, 0.1, label = 'Women writers', color = 'red')
+      plt.title("Texts in the canon", loc ='center', size=40)
+      print(women)
+      print(men)
+      plt.legend()
+
+      plt.savefig('my_plot.png', transparent=True)
+      files.download('my_plot.png')
+
+    </pre>
+
+    <pre>
+      with open ('divina commedia.txt', 'r') as f:
+      text =f.read()
+    # count words, sentences, and letters
+    words = 1
+    sentences = 0
+    letters = 0
+
+    # count the number of times blank spaces appear +1 using a for loop iterating ovr every element in the text
+    for char in text:
+        if char == ' ':
+            words += 1
+    # count the number of times punctuation marks appear. I am not sure why putting ASCII numbers (33, 46, 63) seems to not work anymore
+        elif char == '.' or char == '!' or char == '?':
+            sentences += 1
+        elif char.isalpha():
+            letters += 1
+
+    # calculate variables of Coleman Liau's index
+    L = (letters / words)
+    S = (sentences / words)
+    print(f'words {words}')
+    print(f'letters {letters}')
+    print(f'sentences {sentences}')
+    # Coleman Liau's index
+    index = (5.88 * L - 29.6 * S) - 15.8
+
+    # print results
+    print(f'index {index}')
+    
+    </pre>
+
+    </footer>
+</html>
