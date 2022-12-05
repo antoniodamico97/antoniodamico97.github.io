@@ -5,6 +5,7 @@ html {
 p {
   margin-left: 10%;
   margin-right: 10%;
+  color: white;
 }
 
 li {
@@ -21,6 +22,10 @@ img {
   height: 100%;
 }
 
+.small {
+  width: 14%;
+  margin-left: 1%;
+}
 img:hover {
   transform: opacity 1;
   shadow: 5px 10px;
@@ -46,7 +51,7 @@ body {
     color: white;
     text-align: justify;
     text-justify: inter-word;
-    margin: 20px;
+    margin: 1%;
   }
 
 #bottom {
@@ -115,27 +120,21 @@ button:focus {
 .button1 {background-color: white;}
 
 .navbar {
-    border: 2px black;
-    overflow: visible;
-    background-color: grey;
-    opacity: 100%;
-    color: black;
-    margin: 0;
+    background-image: url("jerome3.png");
+    color: green;
+    opacity: 1;
+    background-size: 60%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-opacity: 0.5;
+    margin: 2%;
   }
+
 .navbar a:hover {
-    background-color: darkgrey;
-    color: black;
-    margin: 10;
-  }
-.navbar a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 10px 15px;
+    opacity: 3;
     text-decoration: underline;
-    margin: 3;
   }
+
 .center {
     display: block;
     margin-left: 0;
@@ -144,7 +143,7 @@ button:focus {
   }
 
 .table__row:nth-child(even) {
-    background-color: grey;
+    background-color: black;
 }
 .table__header {
   text-align: left;

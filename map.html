@@ -16,49 +16,39 @@
           text.style.display = "inline";
           document.getElementById("display").style.visibility = "visible";
           }
-
+        </script>
+        <script>
           function displaydante() {
             document.getElementById("displaydante").value = "Dante Alighieri, click to learn more";
           }
-
-  </script>
+        </script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+        </script>
 
 
     </head>
     <body>
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-            <div class="container 1">
-              <a class="navbar-brand" href="#">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="theory.html">I Promessi Sposi</a></li>
-                      <li><a class="dropdown-item" href="visualizations.html">I Malavoglia</a></li>
-                      <li>
-                      <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="cinema.html">Cinema</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <body>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-inner">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarcollapse">
+              <ul class="navbar-nav justify-content-between w-100">
+                  <p><a href="index.html" class="nav-link">Home</a></p>
+                  <p><a href="map.html" class="nav-link">Map</a></p>
+                  <p><a href="model.html" class="nav-link">Model</a></p>
+              </ul>
+          </div>
+      </nav>
+      <hr class="my-3">
           <h1> Mapping Italian Literature and Film</h1>
           <h2> Where do we locate the authors in the list? </h2>
-
+      <hr class="my-3">
   <div class="imagecontainer">
     <img src="mappa Italia.png" width=100%>
     <div class="tuscany"><button class="btn" onClick="document.getElementById('dante').scrollIntoView()";><img src="/icons/dante.png" id="displaydante" onMouseover="displaydante();"></div>
@@ -83,6 +73,8 @@
       Its CL index is 11.461450670002641.</p>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <hr class="my-3">
+    <h1>Word Count</h1>
     <canvas id="wordsinthecanon"></canvas>
 
     <script>
@@ -90,10 +82,10 @@
       new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Dante', 'Manzoni', 'Verga', ''],
+          labels: ["Dante's Comedy", "Manzoni's Betrothed", "Verga's Malavoglia", "Svevo's Zeno", "Lampedusa's Gattopardo"],
           datasets: [{
             label: 'How long are these texts?',
-            data: [83134, 217399, 87424],
+            data: [83134, 217399, 87424, 141363, 72941],
             borderWidth: 4
           }]
         },
@@ -109,7 +101,7 @@
 
     </script>
     <hr class="my-3">
-    <div id='timeline1'><h3>Complete timeline</h3><img src="/graphs/timeline1.png" opacity="0.6">
+    <div id='timeline1'><h3>Complete timeline</h3><img src="timeline1.png" opacity="0.6">
     <div><button class="btn" onClick="document.getElementById('code1').scrollIntoView();"><p class="t">See code</p></div>
     <p>The outlier here is Moses who supposedly wrote Exodus and Genesis when he was roughly 150 years old. According to contemporary scholarship, both texts were written much later but I kept the traditional dating.</p>
       <form>
@@ -119,7 +111,7 @@
     </form>
     <hr class="my-3">
 
-    <div id='timeline2'><h3>1200-2022 timeline</h3><img src="/graphs/timeline2.png" opacity="0.6">
+    <div id='timeline2'><h3>1200-2022 timeline</h3><img src="timeline2.png" opacity="0.6">
     <div><button class="btn" onClick="document.getElementById('code2').scrollIntoView();"><p class="t">See code</p></div>
     <p>The graph shows the correlation between the age of the author at the time in which their canonical text was published and the year in which it was published. As the downward tendency shows, the average age of the authors included in the canon has decreased.
       Meanwhile, the gap around the 17th and early 18th century displays the bias of the canon against the cultural products of this century and the extent to which the Seicento has been largely ignored in such gatherings, perhaps under the influence of Alessandro Manzoni and Benedetto Croce’s negative assessment of this century.
@@ -136,7 +128,7 @@
 
     <div id='gender'><h3>Gender imbalance</h3>
     <p>154 texts are authored by men, 18 by women.</p>
-    <img id="small" src="/graphs/gender.png" width="10%">
+    <img id="small" src="gender.png" width="10%">
     <div><button class="btn" onClick="document.getElementById('code3').scrollIntoView();"><p class="t">Source Code</p></div>
     <form>
 
@@ -248,7 +240,7 @@
         <h3>1881</h3>
         <p>Verga writes about writing I Malavoglia in a 1875 letter. The novel is published in 1881.</p>
         <p></p>
-        <img src="word frequency malavoglia.png" width= 50% class="left">
+        <img src="/graphs/word frequency malavoglia.png" width= 50% class="left">
         <form>
           <a class= "fixedbtn" href>
           <button class="btni" id="fixedbutton" ondbclick = "return();">Return to map</button>
@@ -274,7 +266,7 @@
       <p></p>
       <h3>1923</h3>
       <p>Zeno Cosini fails to quit smoking, accidentally murders his father, and marries a woman he finds unattractive.</p>
-
+      <img src="/graphs/zeno.pgn"
       <form>
         <a class= "fixedbtn" href>
         <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
@@ -338,7 +330,13 @@
             <p></p>
             <h3>1958</h3>
             <p>The twiglight of Sicily's aristocracy from the solipsistic perspective of the last leopard.</p>
-
+            <ul>
+              <li>words: 72941</li>
+              <li>letters: 369998</li>
+              <li>sentences: 3021</li>
+              <li>index: 12.800740872760176</li>
+            </ul>
+            <p>Time period: 1860-1910</p>
       <form>
         <a class= "fixedbtn" href>
         <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
@@ -363,7 +361,9 @@
       <hr class="my-3">
 
 <footer>
-      by <a href="https://italian.yale.edu/people/antonio-damico">Antonio P. D'Amico</a>
+      <a class="small" href="https://italian.yale.edu/people/antonio-damico">Antonio P. D'Amico</a>
+      <p></p>
+      <img class="small" src="Yales-logo.jpg">
       <div id='code1'><h1>Code Timeline</h1><pre>
 
 
@@ -455,7 +455,7 @@
       files.download('my_plot.png')
 
     </pre>
-    <h2> Code to measure the CL index of the Comedy </h2>
+
     <pre>
       with open ('divina commedia.txt', 'r') as f:
       text =f.read()

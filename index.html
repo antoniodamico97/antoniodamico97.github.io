@@ -11,41 +11,23 @@
     </head>
     <body>
 
+      <body>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-inner">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarcollapse">
+              <ul class="navbar-nav justify-content-between w-100">
+                  <p><a href="index.html" class="nav-link">Home</a></p>
+                  <p><a href="map.html" class="nav-link">Map</a></p>
+                  <p><a href="model.html" class="nav-link">Model</a></p>
+              </ul>
+          </div>
+      </nav>
 
-            
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-            <div class="container 1">
-              <a class="navbar-brand" href="#">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="map.html">Map</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="model.html">Model</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
+        <hr class="my-3">
         <h1> Place and Exile in Italian Literature and Film </h1>
         <h2>National Canons, Transnational Turns, and the Place of Translation</h2>
         <hr class="my-3">
@@ -108,23 +90,25 @@
           <p></p>
           <hr class="my-3">
           <h2>Data: Transmission, Translation, Transmutation</h2>
-          <p>I created a small dataset listing the texts included in the list on excel 
-            before converting this list to a CSV file. I could not find any relevant data on data.gov or similar databases. 
-            The dataset features the following fields: name of the author, name of the text, 
+          <p>I created a small dataset listing the texts included in the list on excel
+            before converting this list to a CSV file. I could not find any relevant data on data.gov or similar databases.
+            The dataset features the following fields: name of the author, name of the text,
             year of publishing, age of the author at the time of publishing, sex of the author, and setting.</p>
+          <button class="btni" id="fixedbutton" href="index.html"><a href="map.html" class="nav-link">View Map</a></button>
           <hr class="my-3">
           <h2>Classification Model predicting the Gender of Authors</h2>
           <p>
-            Since the meaning of what is Italian is constantly shifting and is directly affected by the way in which new texts constantly reposition its meaning, adopting a simple linear regression model where the regression line shifts in relation to the data would not be a problem - or should I instead use a logit function? 
+            Since the meaning of what is Italian is constantly shifting and is directly affected by the way in which new texts constantly reposition its meaning, adopting a simple linear regression model where the regression line shifts in relation to the data would not be a problem - or should I instead use a logit function?
           </p>
-
-          <h2>Towards a computational analysis of the literary and cinematic construction of space</h2>
+          <button class="btni" id="fixedbutton" href="index.html"><a href="model.html" class="nav-link">View Model</a></button>
           <hr class="my-3">
+          <h2>Towards a computational analysis of the literary and cinematic construction of space</h2>
+
           <p>My project aims to evaluate the spatial and temporal coordinates of the imagined places that the texts that I consider represent / bring to life. To what extent can these virtual worlds be mapped onto the spaces inhabited by their authors, thus revealing their umbilical (referential) connection to a reality outside of the text? What is the relation between place and literature that emerges in autobiography? These issues are instantiations of (and thus can be subsumed under) the broader issue of the relation between man and the world (i.e. God(s), history, nature). At the same time, the poetic reflections that these texts provide about the human condition through writing and the moving image is overdetermined by their own specific embeddedness in the world.</p>
           <p>My analysis aims to explore the relation between the perceived aesthetic value of a text and politics, finding possible correlations between the base and the superstructure, political and economic power and cultural hegemony. Are the imagined spaces which shape the idea of Italy across literature the product of an elite? Most of the primary texts appearing on this list are invested in Italy’s national project, laying the ideological groundwork for the formation of an imagined community transcending local identities. Yet, regionalism, the Southern Question, and more recently, the transnational shift beyond Italy’s geographical borders are also key themes which Italian intellectuals think about through literaturep>. </p>
           </p>
           <hr class="my-3">
-          <h1>Conclusion</h1>
+          <h2>Conclusion</h2>
           <p>Overall, my model should evaluate the extent to which a text is in dialogue with other texts appearing in the canon (and thus operates as a centripetal force reinforcing the idea of the canon as a coherent network) and vice versa whether it is original enough and thus articulates a valuable intervention to the field of Italian literature.</p>
     </body>
 <footer>

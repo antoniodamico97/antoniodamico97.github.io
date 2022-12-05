@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=2" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Antonio D'Amico's Final Project</title>
+
+        <script>
+          function displayt() {
+          text.style.display = "inline";
+          document.getElementById("display").style.visibility = "visible";
+          }
+        </script>
+        <script>
+          function displaydante() {
+            document.getElementById("displaydante").value = "Dante Alighieri, click to learn more";
+          }
+        </script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+        </script>
+
+
+    </head>
+    <body>
+
+      <body>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-inner">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarcollapse">
+              <ul class="navbar-nav justify-content-between w-100">
+                  <p><a href="index.html" class="nav-link">Home</a></p>
+                  <p><a href="map.html" class="nav-link">Map</a></p>
+                  <p><a href="model.html" class="nav-link">Model</a></p>
+              </ul>
+          </div>
+      </nav>
+      <hr class="my-3">
+          <h1> Classification Model predicting authorship</h1>
+          <h2> Who wrote the texts in the canon? </h2>
+      <hr class="my-3">
+      <h3>Data cleaning</h3>
+      <p>#drop values where age of the author is less than 15</p>
+      <pre>
+                    df = df.loc[df['year'] > 15]</pre>
+      <pre>
+                    from sklearn.model_selection import train_test_split</pre>
+      <p>#split dataset into train, dev, test</p>
+                    <pre>
+                    df_train, df_test = train_test_split(df, test_size=0.2, random_state=42, stratify=df['gender'])
+
+                    total_size = len(df_train) + len(df_dev) + len(df_test)
+                    print("train:", len(df_train), "=>", len(df_train) / total_size)
+                    print("dev:", len(df_dev), " =>", len(df_dev) / total_size)
+                    print("test:", len(df_test), "=>", len(df_test) / total_size)
+
+                    train: 102 => 0.5930232558139535
+                    dev: 35  => 0.20348837209302326
+                    test: 35 => 0.20348837209302326
+                    </pre>
+                    <p># drop non numerical values</p>
+
+                    <pre>
+                    x_train = df_train.drop(['ï»¿name', 'title', 'place', 'gender', 'genre'], axis=1)
+                    x_dev = df_dev.drop(['ï»¿name', 'title', 'place', 'gender', 'genre'], axis=1)
+                    x_test = df_test.drop(['ï»¿name', 'title', 'place', 'gender', 'genre'], axis=1)
+
+                    y_train = pd.DataFrame(data=df_train['gender'])
+                    y_dev = pd.DataFrame(data=df_dev['gender'])
+                    y_test = pd.DataFrame(data=df_test['gender'])
+
+                    x_train = pd.get_dummies(x_train, columns=['year', 'birth'], drop_first=True)
+                    x_dev = pd.get_dummies(x_dev, columns=['year', 'birth'], drop_first=True)
+                    x_test = pd.get_dummies(x_test, columns=['year', 'birth'], drop_first=True)
+                    </pre>
+                    <h3>Classification Model</h3>
+                    <p># logistic regression predicting the auhtor's gender</p>
+                    <pre>
+                    from sklearn.model_selection import train_test_split
+                    from sklearn.linear_model import LogisticRegression
+
+                    y = df['gender']
+                    x = df[['year', 'birth']]
+
+                    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=140, random_state=4)
+                    lreg = LogisticRegression()
+                    lreg.fit(x_train, y_train)
+                    y_pred= lreg.predict(x_test)
+
+                    print(y_pred)
+
+                     ['uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'donna' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'donna' 'donna' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'donna' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'donna' 'uomo' 'uomo' 'donna' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'donna' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'donna' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'donna' 'uomo' 'uomo' 'uomo' 'uomo'
+                      'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo' 'uomo']
+
+                </pre>
+
+
+                </body>
+    <footer>
+
+        <p>by <a href="https://italian.yale.edu/people/antonio-damico">Antonio P. D'Amico</a>
+        </p>
+
+    </footer>
+</html>
