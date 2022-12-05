@@ -11,7 +11,7 @@
     </head>
     <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark statitc-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
   <div class="container">
     <a class="navbar-brand" href="#">
     </a>
@@ -20,14 +20,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="map.html">Mapping Italian Literature</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Final Project Antonio D'Amico</a>
-        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="map.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -52,37 +46,84 @@
         <hr class="my-3">
         <div class="section">
 
-<p>
-        “A real translation is transparent; it does not cover the original, does not block its light, 
-        but allows the pure language, as though reinforced by its own medium, to shine upon the original all the more fully”</p>
+        <p>
+        “A real translation is transparent;
+        it does not cover the original,
+        does not block its light,
+        but allows the pure language,
+        as though reinforced by its own medium,
+        to shine upon the original all the more fully”</p>
 
-            <p><em>Walter Benjamin, The Task of the Translator, 260</em></p>
-            <p> "What I tell you in <em>darkness</em>, that speak ye in Light."
-            <p><em>Matthew 10:27</em></p>
-            <p class="prose">What belongs to the canon of Italian literature and cinema? My project aims to approach these questions by examining the 2020  <a href="https://italian.yale.edu/sites/default/files/files/GraduateReadingList2020.pdf">Graduate Reading List</a> of Italian Studies at Yale University and offer a quantitative analysis of some of the shared recurring features of the roughly 100 texts that have been selected in this list. To this end, my goal is to build a model that classifies whether a text is or is not likely to enter the canon according to a set of specific parameters. These include the gender of the author, their geographic (regional) provenance (using GeoPandas, if time permits), their age (how old was the author when their canonical text was released to the public), and the critical engagement with the text over the past century. Which generation of authors is more present than others? Which region is neglected? Overall, the project will reach a working positive (descriptive) definition of what is Italian culture as it is currently understood in 2022 at .
-            </p>
-            <a class="btn btn-warning btn-lg" href="visualizations.html" role="button">Visualize the Italian Canon</a>
+        <p>Walter Benjamin, <em>The Task of the Translator,</em> 1923, p. 260.</p>
+
+        <p> "What I tell you in <em>darkness</em>, that speak ye in Light."
+        <p><em>Matthew, </em>10:27</p>
+
+        <p>Quant’è bella giovinezza,</p>
+        <p>che si fugge tuttavia!</p>
+        <p>chi vuol esser lieto, sia:</p>
+        <p>di doman non c’è certezza.</p>
+        <p>Lorenzo de Medici, <em>Trionfo di Bacco e Arianna</em></p>
+
+        <h2> Abstract </h2>
+        <p></p>
+        <p class="prose">What belongs to the canon of Italian literature and cinema? My project aims to approach these questions by examining the 2020  <a href="https://italian.yale.edu/sites/default/files/files/GraduateReadingList2020.pdf">Graduate Reading List</a> of Italian Studies at Yale University and offer a quantitative analysis of some of the shared recurring features of the roughly 100 texts that have been selected in this list. To this end, my goal is to build a model that classifies whether a text is or is not likely to enter the canon according to a set of specific parameters. These include the gender of the author, their geographic (regional) provenance (using GeoPandas, if time permits), their age (how old was the author when their canonical text was released to the public), and the critical engagement with the text over the past century. Which generation of authors is more present than others? Which region is neglected? Overall, the project will reach a working positive (descriptive) definition of what is Italian culture as it is currently understood in 2022 at Yale.
+        </p>
+        <p></p>
+          <p><a class="btni" href="map.html" role="button">Mapping Italian Literature and Film</a>
           </div>
+        <p></p>
         <hr class="my-3">
-        <h2>Poems</h2>
-        <p>The list lists the primary texts that the Italian Studies department at Yale has included in the graduate reading list. The list includes a total of 173 items and comprises:
+        <h2>Background</h2>
+        <p></p>
+        <p>What goes into the establishment of literary and cinematic canons? Why is a restricted number of texts by a restricted number of authors deemed more worthy of consideration? How does one evaluate which texts are more valuable than others? In other words, what is the cost opportunity of reading a text instead of another? Any attempt to tackle these thorny questions requires that we take a step back and offer a preliminary definition of what a literary canon is, bearing in mind the inherent limitations that axiomatic starting points impose on one’s understanding of a concept. For the sake of conceptual clarity, canons can be tentatively defined as selections of texts that a community (local, national, academic) considers more important than others.
+        </p>
+        <p>The texts comprising a canon can be said to perform a specific function. Canons are tools that allow members of a community to organize the most foundational ideas that their community upholds into a coherent whole, allowing these communities to reproduce themselves over time and transmit these ideas across time. Canons are first and foremost a matter of normative conventions (i.e., politics) and are thus subject to change over time. Canons evolve, new texts are incorporated, and old texts are dismissed, in accordance with how the community that upholds them changes. But this does not mean that the process through which canons are formed, and texts are selected to appear in them is arbitrary. Whether this is explicit or not, canons are built around hierarchies of values. But how do we measure the value of a text? Do we measure the value of a work of art based on its formal merits and on aesthetic features (its literariness or the extent to which it is cinematic) or do we give more weight to its politics?
+        </p>
+        <p>My project aims to probe these questions by looking at the way in which one canon in particular has been organized by a particular community: the canon of Italian Studies at Yale University. This entails thinking about how this list could be organized differently and the different ways in which similar lists at other institutions have, in fact, been organized differently. The list lists the primary texts that the Italian Studies department at Yale has included in the graduate reading list. It includes a total of 172 items and comprises:
+        </p>
 
-        <ul>
           <li>17 Latin and Biblical texts</li>
           <li>50 stand-alone poems</li>
           <li>69 primary texts (including collections of poems and letters)</li>
           <li>27 texts on literary theory and history</li>
           <li>7 films</li>
-        </ul>
-
-        </p>
+        <p></p>
 
           <p class="prose">These texts have been transcribed into a csv file according to 8 parameters: name, title, year,
           age, birth, place, gender, genre. These will be used to answer the following question: what
           belongs to the canon of Italian literature and cinema? Let’s start by looking at an example:
           Alessandro Manzoni’s historical novel I Promessi Sposi (1840-2).</p>
 
-          <img src="word frequency malavoglia.png" width= 100% height= 100% class="left">
+          <p>The novel comprises 217399 words, 1026231 letters, 12381 sentences, and has a Coleman–Liau index (i.e., readability score) equal to 10.270776222521722.
+            Let us now compare this text to another text appearing in the canon, such as I Malavoglia, charting the relation between the two novels to reveal a set of underlying correlations at the level of form and content. The novel comprises 87424 words, 395131 letters, 4522 sentences, and has a slightly lower Coleman–Liau index (i.e., it is easier to read):  9.24482842240117. What does this tell us? I Malavoglia was released 40 years after I Promessi Sposi and its author was influenced quite heavily to Manzoni in his previous work.
+          </p>
+
+          <li> What are some of the shared features (words, CL index, metaphors) which the texts appearing on this list share?</li>
+          <p></p>
+          <li>Could this list be reorganized around egalitarian demands to decolonize and diversify the canon? Is Italian Studies too white, too male, and too heteronormative?</li>
+          <p></p>
+          <li>Do these texts accurately represent the state in which Italy found itself at the time of their publication? Do they fail to represent the state in which Italy finds itself today in the wake of globalization?</li>
+          <p></p>
+          <li>What would an author have to write about and how should they write it if they wanted their work to enter the canon?</li>
+          <p></p>
+
+          <h2>Data: Transmission, Translation, Transmutation</h2>
+          <p>I created a small dataset listing the texts included in the list on excel 
+            before converting this list to a CSV file. I could not find any relevant data on data.gov or similar databases. 
+            The dataset features the following fields: name of the author, name of the text, 
+            year of publishing, age of the author at the time of publishing, sex of the author, and setting.</p>
+
+          <h2>Classification Model predicting the Gender of Authors</h2>
+          <p>
+            Since the meaning of what is Italian is constantly shifting and is directly affected by the way in which new texts constantly reposition its meaning, adopting a simple linear regression model where the regression line shifts in relation to the data would not be a problem - or should I instead use a logit function? 
+          </p>
+
+          <h2>Towards a computational analysis of the literary and cinematic construction of space</h2>
+          <p>My project aims to evaluate the spatial and temporal coordinates of the imagined places that the texts that I consider represent / bring to life. To what extent can these virtual worlds be mapped onto the spaces inhabited by their authors, thus revealing their umbilical (referential) connection to a reality outside of the text? What is the relation between place and literature that emerges in autobiography? These issues are instantiations of (and thus can be subsumed under) the broader issue of the relation between man and the world (i.e. God(s), history, nature). At the same time, the poetic reflections that these texts provide about the human condition through writing and the moving image is overdetermined by their own specific embeddedness in the world.</p>
+          <p></p>My analysis aims to explore the relation between the perceived aesthetic value of a text and politics, finding possible correlations between the base and the superstructure, political and economic power and cultural hegemony. Are the imagined spaces which shape the idea of Italy across literature the product of an elite? Most of the primary texts appearing on this list are invested in Italy’s national project, laying the ideological groundwork for the formation of an imagined community transcending local identities. Yet, regionalism, the Southern Question, and more recently, the transnational shift beyond Italy’s geographical borders are also key themes which Italian intellectuals think about through literaturep>. </p>
+          <h1>Conclusion</h1>
+          <p>Overall, my model should evaluate the extent to which a text is in dialogue with other texts appearing in the canon (and thus operates as a centripetal force reinforcing the idea of the canon as a coherent network) and vice versa whether it is original enough and thus articulates a valuable intervention to the field of Italian literature.</p>
     </body>
 <footer>
       by <a href="https://italian.yale.edu/people/antonio-damico">Antonio P. D'Amico</a>
