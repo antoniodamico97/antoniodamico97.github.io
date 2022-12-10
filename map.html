@@ -8,31 +8,21 @@
         <script type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!-- import chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Antonio D'Amico's Final Project</title>
 
-        <script>
-          function displayt() {
-          text.style.display = "inline";
-          document.getElementById("display").style.visibility = "visible";
-          }
-        </script>
-        <script>
-          function displaydante() {
-            document.getElementById("displaydante").value = "Dante Alighieri, click to learn more";
-          }
-        </script>
         <!-- Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous">
         </script>
 
-
     </head>
     <body>
-
-      <body>
+        <!-- dropdown navigation bar with background image of Jerome -->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-inner">
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
               <span class="navbar-toggler-icon"></span>
@@ -45,12 +35,19 @@
               </ul>
           </div>
       </nav>
+
+      <!-- separation line -->
       <hr class="my-3">
+      <!-- title -->
           <h1> Mapping Italian Literature and Film</h1>
           <h2> Where do we locate the authors in the list? </h2>
+
       <hr class="my-3">
-  <div class="imagecontainer">
+
+    <!-- image container, every button's position is relative to the background map -->
+    <div class="imagecontainer">
     <img src="mappa Italia.png" width=100%>
+    <!-- every button sends the user to a different section of the page -->
     <div class="tuscany"><button class="btn" onClick="document.getElementById('dante').scrollIntoView()";><img src="/icons/dante.png" id="displaydante" onMouseover="displaydante();"></div>
     <div class="tuscany2"><button class="btn" onclick="display()"><img src="/icons/petrarca.png"></div>
     <div class="sicily"><button class="btn" onClick="document.getElementById('verga').scrollIntoView();"><img src="/icons/verga.png"></div>
@@ -64,22 +61,24 @@
     <div class="sardegna"><button class="btn" onClick="document.getElementById('gramsci').scrollIntoView();"><img src="/icons/gramsci.png"></div>
     <div class="tuscany3"><button class="btn" onClick="document.getElementById('boccaccio').scrollIntoView();"><img src="/icons/boccaccio.png"></div>
     <div class="tuscany4"><button class="btn" onClick="document.getElementById('caterina').scrollIntoView();"><img src="/icons/caterina.png"></div>
-    <div class="timeline1"><button class="btn" onClick="document.getElementById('timeline1').scrollIntoView();"><p class="t">Complete Timeline</p></div>
-    <div class="timeline2"><button class="btn" onClick="document.getElementById('timeline2').scrollIntoView();"><p class="t">Abridged Timeline</p></div>
-    <div class="gender"><button class="btn" onClick="document.getElementById('gender').scrollIntoView();"><p class="t">Gender Breakdown</p></div>
+    <div class="timeline1"><button class="btn" onClick="document.getElementById('timeline1').scrollIntoView();"><p class="t">Full Timeline</p></div>
+    <div class="timeline2"><button class="btn" onClick="document.getElementById('timeline2').scrollIntoView();"><p class="t">Short Timeline</p></div>
+    <div class="gender"><button class="btn" onClick="document.getElementById('gender').scrollIntoView();"><p class="t">Writers' Gender</p></div>
   </div>
 
-    <p id="text" class="info" position="relative" top="200%" style="display:none">Dante's (1265-1321) Comedy is 83134 words, 404488 letters, and 3785 sentences long.
-      Its CL index is 11.461450670002641.</p>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <hr class="my-3">
+    <!-- exploratory data visualizations of the dataset I created -->
+    <!-- first graph displaying the number of time each place is represented in the list -->
     <h1>Real Places, Imagined Spaces<h1>
-    <img id="small" src="/graphs/place.png" width="10%">
-    <hr class="my-3">   
+    <div id='barplace'><img id="small" src="/graphs/place.png" width="10%"></div>
+    <!-- button allowing the user to view the python code I used to visualize this data -->
+    <div><button class="btn" onClick="document.getElementById('codeplace').scrollIntoView();"><p class="t">See Code</p></div>
+    <hr class="my-3">
+
+    <!-- use chart.js to display the number of words in some of these authors' texts in an interactive fashion-->
+    <!-- Hovering over the bars reveals the number of words in each text represented -->
     <h1>Word Count</h1>
     <canvas id="wordsinthecanon"></canvas>
-    
     <script>
       const ctx = document.getElementById('wordsinthecanon');
       new Chart(ctx, {
@@ -101,51 +100,63 @@
           }
         }
       });
-
     </script>
+
     <hr class="my-3">
+
+    <!-- third graph: a timeline showing the relation between the year of pubblication of every text in the reding list and the age of the author at the time of publishing -->
     <div id='timeline1'><h3>Complete timeline</h3><img src="/graphs/timeline1.png" opacity="0.6">
+    <!-- button allowing the user to view the python code I used to visualize this data -->
     <div><button class="btn" onClick="document.getElementById('code1').scrollIntoView();"><p class="t">See code</p></div>
     <p>The outlier here is Moses who supposedly wrote Exodus and Genesis when he was roughly 150 years old. According to contemporary scholarship, both texts were written much later but I kept the traditional dating.</p>
-      <form>
+    <img class="img2" src="/graphs/matrix.png" opacity="0.6">
+    <!-- button allowing the user to 'return to the map' -->
+    <form>
       <a class= "fixedbtn" href>
         <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
       </a>
     </form>
+
     <hr class="my-3">
 
+    <!-- fourth graph: a shorter timeline where only Italian literary works are considered, thus excluding their Latin predecessors -->
     <div id='timeline2'><h3>1200-2022 timeline</h3><img src="/graphs/timeline2.png" opacity="0.6">
     <div><button class="btn" onClick="document.getElementById('code2').scrollIntoView();"><p class="t">See code</p></div>
     <p>The graph shows the correlation between the age of the author at the time in which their canonical text was published and the year in which it was published. As the downward tendency shows, the average age of the authors included in the canon has decreased.
       Meanwhile, the gap around the 17th and early 18th century displays the bias of the canon against the cultural products of this century and the extent to which the Seicento has been largely ignored in such gatherings, perhaps under the influence of Alessandro Manzoni and Benedetto Croce’s negative assessment of this century.
     </p>
-    <p>Where are these 173 texts / their authors from? The great majority are from Northern Italy.
+    <p>Where are these 172 texts / their authors from? The great majority are from Northern Italy.
       Overall, there is a strong bias toward metropolitan centers exercising a hegemonic hold over the peninsula such as Rome (which appears 5 times) and Florence (7).
       In addition, the places were the authors are from often overlap with the settings of their work, but this is not always the case.</p>
-    <form>
-      <a class= "fixedbtn" href>
-        <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
-      </a>
+
+      <form>
+    <a class= "fixedbtn" href>
+      <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
+    </a>
     </form>
+
     <hr class="my-3">
 
+    <!-- fifth and sixth graph: a piechart and a barplot displaying the number of male and female authors in the text  -->
     <div id='gender'><h3>Gender imbalance</h3>
     <p>154 texts are authored by men, 18 by women.</p>
     <img id="small" src="/graphs/gender.png" width="10%">
     <div><button class="btn" onClick="document.getElementById('code3').scrollIntoView();"><p class="t">Source Code</p></div>
-    <form>
-
     <p><a href="https://artflsrv04.uchicago.edu/cgi-bin/efts/textdbs/IWW/hub.py?type=author&browse=form&auth_allnames=&auth_alternames=&auth_titleofrespect=&auth_birthyear=&auth_deathyear=&auth_century=&auth_birthplace=&auth_deathplace=&auth_region=&auth_father=&auth_mother=&auth_class=&auth_maritalstatus=&auth_dateofmarriage=&auth_numbermarriages=&auth_husbands=&auth_lovers=&auth_maternalstatus=&auth_numberchildren=&auth_children=&auth_religion=&auth_education=&auth_occupation=&auth_prize=&auth_fulltext=ALL&auth_code=&sortorder=auth_authorname"> The Italian Women Writers database </a> lists 794 authors on its website.  The canon includes 18 texts authored by women. Meanwhile, the number of texts authored by men appearing in the canon is 153.</p>
+    <form>
       <a class= "fixedbtn" href>
         <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
       </a>
     </form>
 
     <hr class="my-3">
+
     <h1>Authors</h1>
     <h2>Republic of Letters or Organic Intellectuals?</h2>
     <p>There is an inherent tension that emerges in this list between some of its members' positioning of themselves in dialogue with other authors to form an ahistorical republic of letters which conceives of itself as separate from the world (i.e. intellectual as vate), and the extent to which their ‘eternal’ works reflect their own embeddedness in the historical circumstances which they attempt to transcend. Indeed, there is always a temporal delay implicit in both literary and cinematic texts which separates the reader and the spectator from the text itself. As Gilles Deleuze argues, cinema is about time, or, perhaps, as Friedrich Kittler suggests, it is a means of time axis manipulation, storing a particular configuration of space in its development.</p>
     <hr class="my-3">
+
+    <!-- first section dedicated to a single author -->
     <div id='dante'class="square"><h1>Dante Alighieri</h1>
       <h2>The Divine Comedy</h2>
         <p></p>
@@ -157,12 +168,21 @@
         <h3>1320</h3>
         <p>Dante's Comedy offers a highly allegorical vision of the afterlife. The text interweaves Christian theology and classical literature to probe man's journey through life and beyond through trashumanation in only 83134 words, 404488 letters, and 3785 sentences.
         The comedy's CL index is 11.461450670002641.</p>
+        <ul>
+          <li>words: 83134</li>
+          <li>letters: 404488</li>
+          <li>sentences: 3785</li>
+          <li>index: 11.461450670002641</li>
+        </ul>
+        <!-- button sending the author to the bottom of the page to the display the python code I used to calculate the coleman index of this work, merging the code we used for readability with opening and reading files in python -->
+        <div id= 'index'><button class="btn" onClick="document.getElementById('indexcode').scrollIntoView();"><p class="t">See code</p></div>
+        <p></p>
         <form>
-          <a class= "fixedbtn" href>
           <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
           </a>
         </form>
         <hr class="my-3">
+
     <div id='petrarca'class="square"><h1>Francesco Petrarca</h1>
       <h2>Il Canzoniere</h2>
         <p></p>
@@ -205,9 +225,10 @@
       <p></p>
       <h3>1380</h3>
       <p>A collection of letters written in the name of 'Gesù Cristo crocifisso e di Maria dolce' by a 'serva e schiava dei servi di Gesù Cristo' writing 'nel prezioso sangue suo. Gesù dolce, Gesù amore.'</p>
+
       <form>
-      <a class= "fixedbtn" href>
-        <button class="btni" id="fixedbutton" ondbclick = "return();">Return to map</button>
+        <a class= "fixedbtn" href>
+          <button class="btni" id="fixedbutton" ondbclick = "return();">Return to map</button>
         </a>
       </form>
 
@@ -250,7 +271,8 @@
               <li>index: 9.2</li>
             </ul>
         <p>Time period: 1860-1875</p>
-        <img src="/graphs/word frequency malavoglia.png" width= 50% class="left">
+        <img src="/graphs/word frequency malavoglia.png">
+        <p></p>
         <form>
           <a class= "fixedbtn" href>
           <button class="btni" id="fixedbutton" ondbclick = "return();">Return to map</button>
@@ -276,7 +298,7 @@
       <p></p>
       <h3>1923</h3>
       <p>Zeno Cosini fails to quit smoking, accidentally murders his father, and marries a woman he finds unattractive.</p>
-      <img src="/graphs/zeno.png">
+      <img src="/graphs/word frequency zeno.png">
       <form>
         <a class= "fixedbtn" href>
         <button class="btni" id="fixedbutton" ondbclick = "return()">Return to map</button>
@@ -371,11 +393,32 @@
       <hr class="my-3">
 
 <footer>
+      <!-- link to my profile on the website of the italian department -->
       <a class="small" href="https://italian.yale.edu/people/antonio-damico">Antonio P. D'Amico</a>
       <p></p>
       <img class="small" src="Yales-logo.jpg">
-      <div id='code1'><h1>Code Timeline</h1><pre>
 
+      <hr class="my-3">
+
+      <div id='codeplace'><h2>Code places barplot</h2>
+      <pre>
+
+        import matplotlib.pyplot as plt
+
+        plt.figure(figsize=(50,30))
+        plt.bar(range(len(d)), list(d.values()), align='center', color='white')
+        plt.xticks(range(len(d)), list(d.keys()), rotation=90, fontsize=25)
+        plt.yticks(range(25), fontsize=25)
+        plt.grid(axis='y', linestyle = '--', alpha=0.5)
+        plt.savefig('my_plot.png', transparent=True)
+        files.download('my_plot.png')
+        plt.show()
+
+      </pre>
+      <button class="btni" onClick="document.getElementById('barplace').scrollIntoView();">Back to the barplot</button>
+      <hr class="my-3">
+
+      <div id='code1'><h2>Code Timeline</h2><pre>
 
         import pandas as pd
         import matplotlib.pyplot as plt
@@ -402,9 +445,12 @@
         b = df['gender'].value_counts()
 
         plt.savefig('my_plot.png', transparent=True)
-        files.download('my_plot.png')</pre></div>
-
-    <div id='code2'><h1>Code Shorter Timeline</h1><pre>
+        files.download('my_plot.png')</pre>
+        <button class="btni" onClick="document.getElementById('timeline1').scrollIntoView();">Back to the long Timeline</button>
+        <hr class="my-3">
+      </div>
+      <div id='code2'><h2>Code Shorter Timeline</h2>
+      <pre>
 
         plt.style.use('dark_background')
         plt.figure(figsize=(50, 25))
@@ -425,7 +471,11 @@
         files.download('my_plot.png')
 
     </pre>
-    <div id='code3'><h1>Code barplot and pie</h1><pre>
+    <button class="btni" onClick="document.getElementById('timeline2').scrollIntoView();">Back to the short Timeline</button>
+    <hr class="my-3">
+    <div id='code3'><h2>Code piechart</h2>
+
+      <pre>
 
       plt.figure(figsize=(17,17))
       #print(df['sesso'].value_counts(normalize=True))
@@ -438,7 +488,7 @@
 
       plt.pie(sizes, labels=labels, wedgeprops = { 'linewidth' : 3, 'edgecolor' : 'white' }, colors=['grey','white'])
 
-      # Pieplot + circle on it
+      # Pieplot
       p=plt.gcf()
       plt.legend(prop={'size': 20})
       plt.savefig('my_plot.png', transparent=True)
@@ -451,21 +501,26 @@
       fig = plt.figure(figsize = (15, 30))
       X_axis = ['texts by men', 'texts by women']
       y_axis = [men, women]
-      #np.arange(len(X))
+
       plt.xticks(fontsize=25)
       plt.yticks(fontsize=25)
+      </pre>
+      <button class="btni" onClick="document.getElementById('timeline1').scrollIntoView();">Back to the barplot</button>
+      <hr class="my-3">
+      <h2>Code barplot</h2>
+      <pre>
       plt.bar(X_axis, y_axis, 0.5, color = 'white', alpha = 1)
-      #plt.bar(X_axis, Ygirls, 0.1, label = 'Women writers', color = 'red')
       plt.title("Texts in the canon", loc ='center', size=40)
-      print(women)
-      print(men)
       plt.legend()
 
       plt.savefig('my_plot.png', transparent=True)
       files.download('my_plot.png')
 
     </pre>
-
+    <button class="btni" id=“gender" onClick="document.getElementById('gender').scrollIntoView();">Back to the piechart</button>
+    <hr class="my-3">
+    <h2>Code to calculate the Coleman-Index of txt file</h2>
+    <div id='indexcode'></div>
     <pre>
       with open ('divina commedia.txt', 'r') as f:
       text =f.read()
@@ -496,7 +551,9 @@
     # print results
     print(f'index {index}')
 
+
     </pre>
 
+    <button class="btni" onClick="document.getElementById('index').scrollIntoView();">Back to index values</button>
     </footer>
 </html>
