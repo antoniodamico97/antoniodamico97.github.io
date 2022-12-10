@@ -1,316 +1,327 @@
 html {
-  scroll-behavior: smooth;
- }
+    scroll-behavior: smooth;
+   }
 
-p {
-  margin-left: 10%;
-  margin-right: 10%;
-  color: white;
-}
+  p {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+  }
 
-li {
-  margin-left: 20%;
-  margin-right: 20%;
-}
+  li {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 
-pre {
-  font-family: 'PTSerif-Regular';
-}
-
-img {
-  width: 100%;
-  height: 100%;
-}
-
-.small {
-  width: 14%;
-  margin-left: 1%;
-}
-img:hover {
-  transform: opacity 1;
-  shadow: 5px 10px;
-}
-.img1 {
-  width: 40%;
-  right: 5%;
-  opacity: 1;
-  position: sticky;
-  margin-left: 30%;
-  text-align: center;
-}
-
-body {
+  pre {
     font-family: 'PTSerif-Regular';
-    background-color: black;
-    background-image: url("jerome.jpg");
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-attachment: fixed;
-    text-align: center;
-    color: white;
-    text-align: justify;
-    text-justify: inter-word;
-    margin: 1%;
   }
 
-#bottom {
-    background-color: white;
-    color: black;
-    padding: 15px;
-    text-align: center;
+  img {
+    width: 100%;
+    height: 100%;
   }
 
-h1 {
-    color: white;
-    text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-h2 {
-    size: 6%;
-    color: #8c8c8c;
-    text-align: center;
-    margin-left: 18%;
-    margin-right: 18%;
+  .img2 {
+    width: 40%;
+    height: 40%;
+    margin-left: 8%;
   }
 
-h3 {
-  size: 3%;
-  color: dark grey;
-  text-align: center;
-  margin-left: 20%;
-  margin-right: 20%;
+  .small {
+    width: 14%;
+    margin-left: 1%;
   }
-
-.btni {
-  background-color: white;
-  color: black;
-  padding: 5px;
-  border-radius: 6%;
-  border: 2px solid white;
-  position: static;
-  opacity: 0.5;
-  margin-left: 70%;
-  transition: 0.2s;
-  align: center;
-}
-
-.btni:hover {opacity: 1}
-
-button {
-    background-color: white;
-    color: black;
-    transform: scale(1.1);
-    text-align: center;
-}
-
-button:focus {
-  box-shadow: none;
-  outline:0;
-}
-
-#fixedbtn {
-  position: fixed;
-  bottom: 3px;
-  right: 3px;
-}
-
-.button1 {background-color: white;}
-
-.navbar {
-    background-image: url("jerome3.png");
-    color: green;
+  img:hover {
+    transform: opacity 1;
+    shadow: 5px 10px;
+  }
+  .img1 {
+    width: 40%;
+    right: 5%;
     opacity: 1;
-    background-size: 60%;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-opacity: 0.5;
-    margin: 2%;
+    position: sticky;
+    margin-left: 30%;
+    text-align: center;
   }
 
-.navbar a:hover {
-    opacity: 3;
-    text-decoration: underline;
+  body {
+      font-family: 'PTSerif-Regular';
+      background-color: black;
+      background-image: url("jerome.jpg");
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-attachment: fixed;
+      text-align: center;
+      color: white;
+      text-align: justify;
+      text-justify: inter-word;
+      margin: 1%;
+    }
+
+  #bottom {
+      background-color: white;
+      color: black;
+      padding: 15px;
+      text-align: center;
+    }
+
+  h1 {
+      color: white;
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
   }
 
-.center {
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    width: 80%;
+  h2 {
+      size: 6%;
+      color: #8c8c8c;
+      text-align: center;
+      margin-left: 18%;
+      margin-right: 18%;
+    }
+
+  h3 {
+    size: 3%;
+    color: dark grey;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    }
+
+  .btni {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 6%;
+    border: 2px solid white;
+    position: static;
+    opacity: 0.5;
+    margin-left: 70%;
+    transition: 0.2s;
+    align: center;
   }
 
-.table__row:nth-child(even) {
-    background-color: black;
-}
-.table__header {
-  text-align: left;
+  .btni:hover {opacity: 1}
+
+  button {
+      background-color: white;
+      color: black;
+      transform: scale(1.1);
+      text-align: center;
+  }
+
+  button:focus {
+    box-shadow: none;
+    outline:0;
+  }
+
+  #fixedbtn {
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+  }
+
+  .button1 {background-color: white;}
+
+  .navbar {
+      background-image: url("jerome3.png");
+      color: green;
+      opacity: 1;
+      background-size: 60%;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-opacity: 0.5;
+      margin: 2%;
+    }
+
+  .navbar a:hover {
+      opacity: 3;
+      text-decoration: underline;
+    }
+
+  .center {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      width: 80%;
+    }
+
+  .table__row:nth-child(even) {
+      background-color: black;
+  }
+  .table__header {
+    text-align: left;
+  }
+
+  .table {
+    border-spacing: 0;
+    margin: 1rem;
+    background-color: black:
+  }
+
+  a {
+    color: white;
+  }
+
+
+  #small {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .scatter {
+    position: relative;
+    width: 350%;
+    opacity: 0.8;
+  }
+  .square {
+    position: center;
+    width: 100%;
+    opacity: 1;
+  }
+
+  .chart {
+    position: static;
+    width: 10%;
+    top: 30%;
+    left: 3%;
+  }
+
+  .chart1 {
+    position: static;
+    width: 10%;
+    top: 60%;
+    left: 3%;
+  }
+
+  .t {
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    color: white;
+    margin-left: 50%;
+  }
+
+  .timeline1 {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  }
+
+  .timeline2 {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+  }
+  .gender {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+  }
+
+  .tuscany {
+    position: absolute;
+    width:8%;
+    top: 21%;
+    left: 45%;
+  }
+
+  .tuscany2 {
+    position: absolute;
+    width:8%;
+    top: 26.2%;
+    left: 49.3%;
+  }
+
+  .tuscany3 {
+    position: absolute;
+    width:8%;
+    top: 26%;
+    left: 40%;
+  }
+
+  .tuscany4 {
+    position: absolute;
+    width:8%;
+    top: 31%;
+    left: 45%;
+  }
+
+  .sicily {
+    position: absolute;
+    width:8%;
+    top: 77%;
+    left: 64%;
+  }
+
+  .rome1 {
+    position: absolute;
+    width:8%;
+    top: 40%;
+    left: 50%;
+  }
+
+  .palermo {
+    position: absolute;
+    width:8%;
+    top: 72%;
+    left: 56%;
+  }
+
+  .torino {
+    position: absolute;
+    width:8%;
+    top: 10%;
+    left: 26%;
+  }
+
+  .liguria {
+    position: absolute;
+    width:8%;
+    top: 18%;
+    left: 28%;
+  }
+  .trieste {
+    position: absolute;
+    width:8%;
+    top: 6%;
+    left: 55%;
+  }
+  .abruzzo {
+    position: absolute;
+    width:8%;
+    top: 33%;
+    left: 57%;
+  }
+  .milano {
+    position: absolute;
+    width:8%;
+    top: 9%;
+    left: 35%;
 }
 
-.table {
-  border-spacing: 0;
-  margin: 1rem;
-  background-color: black:
-}
-
-a {
-  color: white;
-}
-
-
-#small {
-  max-width: 100%;
-  height: auto;
-}
-
-.scatter {
-  position: relative;
-  width: 350%;
-  opacity: 0.8;
-}
-.square {
-  position: center;
-  width: 100%;
-  opacity: 1;
-}
-
-.chart {
-  position: static;
-  width: 10%;
-  top: 30%;
-  left: 3%;
-}
-
-.chart1 {
-  position: static;
-  width: 10%;
-  top: 60%;
-  left: 3%;
-}
-
-.t {
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-  color: white;
-  margin-left: 50%;
-}
-
-.timeline1 {
-  position: absolute;
-  top: 40%;
-  left: 5%;
-}
-
-.timeline2 {
-  position: absolute;
-  top: 60%;
-  left: 5%;
-}
-.gender {
-  position: absolute;
-  top: 80%;
-  left: 5%;
-}
-
-.tuscany {
-  position: absolute;
-  width:8%;
-  top: 21%;
-  left: 45%;
-}
-
-.tuscany2 {
-  position: absolute;
-  width:8%;
-  top: 26.2%;
-  left: 49.3%;
-}
-
-.tuscany3 {
-  position: absolute;
-  width:8%;
-  top: 26%;
-  left: 40%;
-}
-
-.tuscany4 {
-  position: absolute;
-  width:8%;
-  top: 31%;
-  left: 45%;
-}
-
-.sicily {
-  position: absolute;
-  width:8%;
-  top: 77%;
-  left: 64%;
-}
-
-.rome1 {
-  position: absolute;
-  width:8%;
-  top: 40%;
-  left: 50%;
-}
-
-.palermo {
-  position: absolute;
-  width:8%;
-  top: 72%;
-  left: 56%;
-}
-
-.torino {
-  position: absolute;
-  width:8%;
-  top: 10%;
-  left: 26%;
-}
-
-.liguria {
-  position: absolute;
-  width:8%;
-  top: 18%;
-  left: 28%;
-}
-.trieste {
-  position: absolute;
-  width:8%;
-  top: 6%;
-  left: 55%;
-}
-.abruzzo {
-  position: absolute;
-  width:8%;
-  top: 33%;
-  left: 57%;
-}
-.milano {
-  position: absolute;
-  width:8%;
-  top: 9%;
-  left: 35%;
-}
 .sardegna {
-  position: absolute;
-  width:8%;
-  top: 59%;
-  left: 31%;
+    position: absolute;
+    width:8%;
+    top: 59%;
+    left: 31%;
 }
 
 .imagecontainer {
-  position: relative;
+    position: relative;
 }
 
 .imagecontainer button {
-  position: absolute;
-  cursor: pointer;
-  opacity: 0.7;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.btn {
+  margin-left: 10%;
 }
 
 .btn:hover {
-  opacity: 1;
-  transform: scale(1.5);
+    opacity: 1;
+    transform: scale(1.5);
 }
